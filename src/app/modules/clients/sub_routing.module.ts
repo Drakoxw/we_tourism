@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './views/login/login.component';
+import { OauthGuard } from 'src/app/core/guards/oauth.guard';
+import { SecureComponent } from './views/secure/secure.component';
 
 const routes: Routes = [
   {
-    path: 'login', component: LoginComponent
+    path: 'secure',
+    canActivate: [OauthGuard],
+    component: SecureComponent
   }
 ];
 

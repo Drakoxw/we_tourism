@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './components/login/login.component';
-import { HomeComponent } from './components/home/home.component';
 import { SubRoutingModule } from './sub-routing.module';
+import { RegisterComponent } from './views/register/register.component';
+import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
+    RegisterComponent,
+    HomeComponent,
     LoginComponent,
-    HomeComponent
   ],
   imports: [
     SubRoutingModule,

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { SecureComponent } from './views/secure/secure.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  
+    SecureComponent
+  ],
   imports: [
     CommonModule
   ]
