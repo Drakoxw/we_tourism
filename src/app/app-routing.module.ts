@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './modules/public/views/home/home.component';
+import { LoginComponent } from './modules/public/views/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent
+  { path: 'home', component: HomeComponent
   },
   {
-    path: 'public',
+    path: 'login',
     loadChildren: () =>
     import('./modules/public/public.module').then((m) => m.PublicModule)
   },
@@ -20,7 +21,7 @@ const routes: Routes = [
     loadChildren: () =>
     import('./modules/agents/agents.module').then((m) => m.AgentsModule)
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
