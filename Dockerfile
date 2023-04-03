@@ -4,15 +4,15 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-COPY package.json /app
-
 RUN npm install -g npm@9.6.3
 
-RUN npm install
+COPY package.json /app
+
+RUN npm install --force or --legacy-peer-deps
 
 COPY . /app
 
-RUN npmrun build --
+RUN npm run build --prod
 
 ####
 
