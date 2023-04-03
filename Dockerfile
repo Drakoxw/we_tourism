@@ -18,4 +18,5 @@ RUN npm run build:ssr --prod
 
 FROM nginx:1.23.4-alpine
 
-COPY --from=build-step /app/dist/weTourism /usr/share/nginx/html
+COPY --from=build-step /app/dist/weTourism/server /usr/share/nginx/html
+COPY --from=build-step /app/dist/weTourism/browser /usr/share/nginx/html
