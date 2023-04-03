@@ -12,7 +12,7 @@ RUN npm install --force or --legacy-peer-deps
 
 COPY . /app
 
-RUN npm run build --prod
+RUN npm run build:ssr --prod
 
 ####
 
